@@ -13,12 +13,18 @@ entity_type: paragraph
 bundle: code
 label: Body
 description: ''
+<<<<<<< HEAD
 required: true
 translatable: true
 default_value:
   -
     value: "```php\r\n\r\n```"
     format: basic_html
+=======
+required: false
+translatable: true
+default_value: {  }
+>>>>>>> c4a7abaac3c8859a5ff431498e0ce7e32a77564a
 default_value_callback: ''
 settings: {  }
 field_type: text_long
