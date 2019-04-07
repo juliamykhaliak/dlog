@@ -1,4 +1,4 @@
-uuid: d44e1929-0373-46b6-94bb-a848a7f722ea
+uuid: 02e68053-ff29-47b5-9f72-0443403de2cf
 langcode: en
 status: true
 dependencies:
@@ -13,18 +13,12 @@ entity_type: paragraph
 bundle: code
 label: Body
 description: ''
-<<<<<<< HEAD
 required: true
 translatable: true
 default_value:
   -
     value: "```php\r\n\r\n```"
     format: basic_html
-=======
-required: false
-translatable: true
-default_value: {  }
->>>>>>> c4a7abaac3c8859a5ff431498e0ce7e32a77564a
 default_value_callback: ''
 settings: {  }
 field_type: text_long
