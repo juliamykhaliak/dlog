@@ -1,0 +1,31 @@
+uuid: bedd54f3-b13a-491c-b2c1-c888fc82e029
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.remote_video.field_remote_video
+    - field.field.paragraph.remote_video.field_title
+    - paragraphs.paragraphs_type.remote_video
+id: paragraph.remote_video.default
+targetEntityType: paragraph
+bundle: remote_video
+mode: default
+content:
+  field_remote_video:
+    type: entity_reference_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_title:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }
