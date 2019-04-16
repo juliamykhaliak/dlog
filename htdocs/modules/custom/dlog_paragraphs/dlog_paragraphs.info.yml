@@ -1,0 +1,7 @@
+name: DLOG - Parapraphs
+type: module
+description: Custom code for paragraph enhancment.
+pacage: dlog
+core: 8.x
+dependencies:
+  - paragraphs:paragraphs
