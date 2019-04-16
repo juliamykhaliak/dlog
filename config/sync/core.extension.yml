@@ -21,6 +21,7 @@ module:
   ctools: 0
   datetime: 0
   dblog: 0
+  devel: 0
   dlog_paragraphs: 0
   dynamic_page_cache: 0
   easy_breadcrumb: 0
@@ -37,6 +38,7 @@ module:
   history: 0
   image: 0
   imagemagick: 0
+  kint: 0
   link: 0
   mailsystem: 0
   markdown: 0
