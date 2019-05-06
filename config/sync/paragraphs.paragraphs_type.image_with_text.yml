@@ -1,9 +1,13 @@
 uuid: 4e91a325-9d80-4e13-a5ec-56baef2fd41b
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - dlog_paragraphs
 id: image_with_text
 label: 'Image with text'
 icon_uuid: null
 description: ''
-behavior_plugins: {  }
+behavior_plugins:
+  dlog_paragraphs_image_and_text:
+    enabled: true
