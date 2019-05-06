@@ -1,9 +1,13 @@
 uuid: ff251da9-b314-4a99-bf42-3ca45247f51c
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - dlog_paragraphs
 id: text
 label: Text
 icon_uuid: null
 description: ''
-behavior_plugins: {  }
+behavior_plugins:
+  dlog_paragraphs_paragraph_class:
+    enabled: true

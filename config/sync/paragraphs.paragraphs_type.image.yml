@@ -1,9 +1,13 @@
 uuid: 5bd04404-e3a4-427b-8507-80f07a727cbd
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - dlog_paragraphs
 id: image
 label: Image
 icon_uuid: null
 description: ''
-behavior_plugins: {  }
+behavior_plugins:
+  dlog_paragraphs_paragraph_class:
+    enabled: true
