@@ -1,0 +1,56 @@
+<?php
+
+/**
+ * @file
+ * Main file for custom hooks and functions.
+ */
+
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\node\Entity\NodeType;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_theme().
+ */
+function dlog_theme($existing, $type, $theme, $path) {
+  $file = 'dlog.theme.inc';
+  return [
+    'dlog_previous_next' => [
+      'variables' => [
+        'entity' => NULL,
+      ],
+      'file' => $file,
+    ],
+  ];
+}
+
+/**
+ * Implements hook_entity_extra_field_info().
+ */
+function dlog_entity_extra_field_info() {
+  $extra = [];
+
+  foreach (NodeType::loadMultiple() as $bundle) {
+    $extra['node'][$bundle->id()]['display']['previous-next'] = [
+      'label' => t('Buttons to previous and next.'),
+      'weight' => 100,
+      'visible' => FALSE,
+    ];
+  }
+
+  return $extra;
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_view().
+ */
+
+function dlog_node_view(array &$build, NodeInterface $node, EntityViewDisplayInterface $display, $view_mode) {
+  if ($display->getComponent('previous-next')) {
+    $build['previous-next'] = [
+      '#theme' => 'dlog_previous_next',
+      '#entity' => $node,
+    ];
+  }
+
+}
