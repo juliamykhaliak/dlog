@@ -74,11 +74,14 @@ class ParagraphStyleBehavior extends ParagraphsBehaviorBase {
   public function submitBehaviorForm(ParagraphInterface $paragraph, array &$form, FormStateInterface $form_state) {
     $styles = [];
     $filtered_values = $this->filterBehaviorFormSubmitValues($paragraph, $form, $form_state);
-    $style_groups = $filtered_values['style_wrapper'];
 
-    foreach ($style_groups as $group) {
-      foreach ($group as $style_name) {
-        $styles[] = $style_name;
+    if (isset($filtered_values['style_wrapper'])) {
+      $style_groups = $filtered_values['style_wrapper'];
+
+      foreach ($style_groups as $group) {
+        foreach ($group as $style_name) {
+          $styles[] = $style_name;
+        }
       }
     }
 

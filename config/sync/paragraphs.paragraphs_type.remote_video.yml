@@ -13,3 +13,7 @@ behavior_plugins:
     enabled: true
   dlog_paragraphs_paragraph_style:
     enabled: true
+  dlog_paragraph_title:
+    enabled: true
+  dlog_paragraph_remote_video:
+    enabled: true
