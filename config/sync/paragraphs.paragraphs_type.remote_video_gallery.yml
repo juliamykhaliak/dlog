@@ -15,3 +15,5 @@ behavior_plugins:
     enabled: true
   dlog_paragraph_title:
     enabled: true
+  dlog_paragraph_remote_video_gallery:
+    enabled: true
