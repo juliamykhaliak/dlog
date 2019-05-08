@@ -21,7 +21,7 @@ interface DlogHeroEntityPluginInterface extends DlogHeroPluginInterface {
    * Gets entity bundles.
    *
    * @return array
-   *   An array with entity bundles.
+   *   An array with entity type bundles.
    */
   public function getEntityBundle();
 
@@ -29,7 +29,7 @@ interface DlogHeroEntityPluginInterface extends DlogHeroPluginInterface {
    * Gets current entity.
    *
    * @return \Drupal\Core\Entity\EntityInterface
-   *   The entity object
+   *   The entity object.
    */
   public function getEntity();
 

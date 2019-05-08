@@ -45,16 +45,16 @@ interface DlogHeroPluginInterface extends PluginInspectionInterface {
    * Gets hero image URI.
    *
    * @return string
-   *   The URI image.
+   *   The URI of image.
    */
   public function getHeroImage();
 
   /**
-   * Gets hero video URI's.
+   * Gets hero video URI.
    *
    * An array with link to the same video in different types.
    *
-   * Keys of array is represent their types and value is file URL.
+   * Keys of array is represents their type and vule is file URI.
    *
    * @code
    * return [

@@ -61,20 +61,12 @@ abstract class DlogHeroPluginBase extends PluginBase implements DlogHeroPluginIn
    * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
    *   The entity type manager.
    */
-  public function __construct(
-    array $configuration,
-    $plugin_id,
-    $plugin_definition,
-    Request $request,
-    CurrentRouteMatch $current_route_match,
-    TitleResolverInterface $title_resolver,
-    EntityTypeManagerInterface $entity_type_manager) {
+  public function __construct(array $configuration, string $plugin_id, $plugin_definition, Request $request, CurrentRouteMatch $current_route_match, TitleResolverInterface $title_resolver, EntityTypeManagerInterface $entity_type_manager) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
 
     $this->request = $request;
     $this->routeMatch = $current_route_match;
-    $this->pageTitle = $title_resolver
-      ->getTitle($this->request, $this->routeMatch->getRouteObject());
+    $this->pageTitle = $title_resolver->getTitle($this->request, $this->routeMatch->getRouteObject());
     $this->entityTypeManager = $entity_type_manager;
   }
 
@@ -151,7 +143,7 @@ abstract class DlogHeroPluginBase extends PluginBase implements DlogHeroPluginIn
    * {@inheritdoc}
    */
   public function getHeroTitle() {
-    $this->getPageTitle();
+    return $this->getPageTitle();
   }
 
   /**

@@ -47,7 +47,7 @@ class DlogHeroPath extends Plugin {
    *
    * @var string
    */
-  public $match_types;
+  public $match_type;
 
   /**
    * The weight of plugin.

@@ -1,0 +1,26 @@
+uuid: fe371cc7-cc0c-4a9a-8b62-8bab009f7e40
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - dlog_hero
+  theme:
+    - bartik
+id: dlog_hero
+theme: bartik
+region: content
+weight: -7
+provider: null
+plugin: dlog_hero
+settings:
+  id: dlog_hero
+  label: 'Dlog Hero'
+  provider: dlog_hero
+  label_display: '0'
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

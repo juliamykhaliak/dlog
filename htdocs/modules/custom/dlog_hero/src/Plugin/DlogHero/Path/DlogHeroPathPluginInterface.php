@@ -5,7 +5,7 @@ namespace Drupal\dlog_hero\Plugin\DlogHero\Path;
 use Drupal\dlog_hero\Plugin\DlogHero\DlogHeroPluginInterface;
 
 /**
- * Interface for DlogHero entity plugin type.
+ * Interface for DlogHero path plugin type.
  */
 interface DlogHeroPathPluginInterface extends DlogHeroPluginInterface {
 
@@ -23,6 +23,6 @@ interface DlogHeroPathPluginInterface extends DlogHeroPluginInterface {
    * @return string
    *   The match type.
    */
-  public function getMatchTypes();
+  public function getMatchType();
 
 }
