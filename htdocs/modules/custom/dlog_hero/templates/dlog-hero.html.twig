@@ -4,7 +4,7 @@
   image and video ? bem_block ~ '--image-and-video',
   image and not video ? bem_block ~ '--image',
   not image ? bem_block ~ '--plain',
-  subtitle ? bem_blokc ~ '--subtitle' : bem_block ~ '--no-subtitle',
+  subtitle ? bem_block ~ '--subtitle' : bem_block ~ '--no-subtitle',
 
 ] %}
 
@@ -12,7 +12,7 @@
   {% if image and video %}
     <video poster="{{ image|image_style('thumbnail') }}" autoplay loop muted class="{{ bem_block }}__video">
       {% for type, video_uri in video %}
-        <source src="{{ file_url(video_uri) }}" type"{{ type }}">
+        <source src="{{ file_url(video_uri) }}" type="{{ type }}">
       {% endfor %}
     </video>
 
